@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D616CDDF26458872003A40C4 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D616CDDE26458872003A40C4 /* .gitignore */; };
+		D616CDE126458C35003A40C4 /* OutlineGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D616CDE026458C35003A40C4 /* OutlineGroupView.swift */; };
 		D6282D312644EB90000655AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6282D302644EB90000655AE /* AppDelegate.swift */; };
 		D6282D332644EB90000655AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6282D322644EB90000655AE /* SceneDelegate.swift */; };
 		D6282D352644EB90000655AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6282D342644EB90000655AE /* ContentView.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		D616CDDE26458872003A40C4 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		D616CDE026458C35003A40C4 /* OutlineGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineGroupView.swift; sourceTree = "<group>"; };
 		D6282D2D2644EB90000655AE /* swift-checking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-checking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6282D302644EB90000655AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6282D322644EB90000655AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				D655838E2645538F005FB850 /* LabelView.swift */,
 				D655839026456260005FB850 /* LinkView.swift */,
 				D655839226456681005FB850 /* Navigation.swift */,
+				D616CDE026458C35003A40C4 /* OutlineGroupView.swift */,
 			);
 			path = swiftui;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				D6282D4C264507DE000655AE /* DatePickerView.swift in Sources */,
 				D6282D352644EB90000655AE /* ContentView.swift in Sources */,
 				D6282D462644EBBD000655AE /* ButtonView.swift in Sources */,
+				D616CDE126458C35003A40C4 /* OutlineGroupView.swift in Sources */,
 				D655838F2645538F005FB850 /* LabelView.swift in Sources */,
 				D6282D52264514B1000655AE /* EditButtonView.swift in Sources */,
 				D6282D5026450F77000655AE /* DisclosureGroupView.swift in Sources */,
