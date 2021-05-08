@@ -18,9 +18,9 @@ struct LabelView: View {
             Label("Label: IconOnlyLabelStyle", systemImage: "bolt.fill")
                 .padding()
                 .labelStyle(IconOnlyLabelStyle())
-            Label("Label: TitleAndIconLabelStyle", systemImage: "bolt.fill")
-                .padding()
-                .labelStyle(TitleAndIconLabelStyle())
+//            Label("Label: TitleAndIconLabelStyle", systemImage: "bolt.fill")
+//                .padding()
+//                .labelStyle(TitleAndIconLabelStyle())
             Label {
                 Text("bbbb")
                     .font(.body)
