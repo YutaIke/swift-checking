@@ -13,6 +13,10 @@
 		D616CDE52645A066003A40C4 /* PickerView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D616CDE42645A066003A40C4 /* PickerView2.swift */; };
 		D616CDE72645AD03003A40C4 /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = D616CDE62645AD03003A40C4 /* Progress.swift */; };
 		D616CDE926463E95003A40C4 /* Scroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = D616CDE826463E95003A40C4 /* Scroll.swift */; };
+		D616CDEB26464566003A40C4 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D616CDEA26464566003A40C4 /* SectionView.swift */; };
+		D616CDED26464D61003A40C4 /* SecureFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D616CDEC26464D61003A40C4 /* SecureFieldView.swift */; };
+		D616CDEF26464F71003A40C4 /* SingInWithAppleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D616CDEE26464F71003A40C4 /* SingInWithAppleButtonView.swift */; };
+		D616CDF22646541E003A40C4 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D616CDF12646541E003A40C4 /* SliderView.swift */; };
 		D6282D312644EB90000655AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6282D302644EB90000655AE /* AppDelegate.swift */; };
 		D6282D332644EB90000655AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6282D322644EB90000655AE /* SceneDelegate.swift */; };
 		D6282D352644EB90000655AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6282D342644EB90000655AE /* ContentView.swift */; };
@@ -28,6 +32,11 @@
 		D6282D52264514B1000655AE /* EditButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6282D51264514B1000655AE /* EditButtonView.swift */; };
 		D6282D5426451B4B000655AE /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6282D5326451B4B000655AE /* FormView.swift */; };
 		D6282D5626451F14000655AE /* GroupBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6282D5526451F14000655AE /* GroupBoxView.swift */; };
+		D6443A5526466C3D005A95E5 /* StepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6443A5426466C3D005A95E5 /* StepperView.swift */; };
+		D6443A5726467044005A95E5 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6443A5626467044005A95E5 /* Tab.swift */; };
+		D6443A59264673F9005A95E5 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6443A58264673F9005A95E5 /* TextView.swift */; };
+		D6443A5B2646754A005A95E5 /* TextEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6443A5A2646754A005A95E5 /* TextEditorView.swift */; };
+		D6443A5D2646788A005A95E5 /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6443A5C2646788A005A95E5 /* ToggleView.swift */; };
 		D655838F2645538F005FB850 /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655838E2645538F005FB850 /* LabelView.swift */; };
 		D655839126456260005FB850 /* LinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655839026456260005FB850 /* LinkView.swift */; };
 		D655839326456681005FB850 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655839226456681005FB850 /* Navigation.swift */; };
@@ -40,6 +49,11 @@
 		D616CDE42645A066003A40C4 /* PickerView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView2.swift; sourceTree = "<group>"; };
 		D616CDE62645AD03003A40C4 /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
 		D616CDE826463E95003A40C4 /* Scroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scroll.swift; sourceTree = "<group>"; };
+		D616CDEA26464566003A40C4 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
+		D616CDEC26464D61003A40C4 /* SecureFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureFieldView.swift; sourceTree = "<group>"; };
+		D616CDEE26464F71003A40C4 /* SingInWithAppleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInWithAppleButtonView.swift; sourceTree = "<group>"; };
+		D616CDF02646526B003A40C4 /* swift-checking.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "swift-checking.entitlements"; sourceTree = "<group>"; };
+		D616CDF12646541E003A40C4 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		D6282D2D2644EB90000655AE /* swift-checking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-checking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6282D302644EB90000655AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6282D322644EB90000655AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +71,11 @@
 		D6282D51264514B1000655AE /* EditButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditButtonView.swift; sourceTree = "<group>"; };
 		D6282D5326451B4B000655AE /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		D6282D5526451F14000655AE /* GroupBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupBoxView.swift; sourceTree = "<group>"; };
+		D6443A5426466C3D005A95E5 /* StepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperView.swift; sourceTree = "<group>"; };
+		D6443A5626467044005A95E5 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		D6443A58264673F9005A95E5 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		D6443A5A2646754A005A95E5 /* TextEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditorView.swift; sourceTree = "<group>"; };
+		D6443A5C2646788A005A95E5 /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
 		D655838E2645538F005FB850 /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
 		D655839026456260005FB850 /* LinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkView.swift; sourceTree = "<group>"; };
 		D655839226456681005FB850 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
@@ -93,6 +112,7 @@
 		D6282D2F2644EB90000655AE /* swift-checking */ = {
 			isa = PBXGroup;
 			children = (
+				D616CDF02646526B003A40C4 /* swift-checking.entitlements */,
 				D6282D442644EBA3000655AE /* swiftui */,
 				D6282D302644EB90000655AE /* AppDelegate.swift */,
 				D6282D322644EB90000655AE /* SceneDelegate.swift */,
@@ -133,6 +153,15 @@
 				D616CDE42645A066003A40C4 /* PickerView2.swift */,
 				D616CDE62645AD03003A40C4 /* Progress.swift */,
 				D616CDE826463E95003A40C4 /* Scroll.swift */,
+				D616CDEA26464566003A40C4 /* SectionView.swift */,
+				D616CDEC26464D61003A40C4 /* SecureFieldView.swift */,
+				D616CDEE26464F71003A40C4 /* SingInWithAppleButtonView.swift */,
+				D616CDF12646541E003A40C4 /* SliderView.swift */,
+				D6443A5426466C3D005A95E5 /* StepperView.swift */,
+				D6443A5626467044005A95E5 /* Tab.swift */,
+				D6443A58264673F9005A95E5 /* TextView.swift */,
+				D6443A5A2646754A005A95E5 /* TextEditorView.swift */,
+				D6443A5C2646788A005A95E5 /* ToggleView.swift */,
 			);
 			path = swiftui;
 			sourceTree = "<group>";
@@ -214,20 +243,29 @@
 				D6282D482644FA5C000655AE /* ViewList.swift in Sources */,
 				D6282D4A26450585000655AE /* ColorPickerView.swift in Sources */,
 				D6282D332644EB90000655AE /* SceneDelegate.swift in Sources */,
+				D6443A5B2646754A005A95E5 /* TextEditorView.swift in Sources */,
 				D6282D4C264507DE000655AE /* DatePickerView.swift in Sources */,
+				D6443A5726467044005A95E5 /* Tab.swift in Sources */,
 				D6282D352644EB90000655AE /* ContentView.swift in Sources */,
 				D6282D462644EBBD000655AE /* ButtonView.swift in Sources */,
+				D616CDF22646541E003A40C4 /* SliderView.swift in Sources */,
 				D616CDE326459904003A40C4 /* PickerView.swift in Sources */,
+				D6443A5526466C3D005A95E5 /* StepperView.swift in Sources */,
 				D616CDE126458C35003A40C4 /* OutlineGroupView.swift in Sources */,
 				D616CDE52645A066003A40C4 /* PickerView2.swift in Sources */,
+				D6443A5D2646788A005A95E5 /* ToggleView.swift in Sources */,
+				D616CDED26464D61003A40C4 /* SecureFieldView.swift in Sources */,
 				D655838F2645538F005FB850 /* LabelView.swift in Sources */,
 				D6282D52264514B1000655AE /* EditButtonView.swift in Sources */,
 				D6282D5026450F77000655AE /* DisclosureGroupView.swift in Sources */,
 				D655839326456681005FB850 /* Navigation.swift in Sources */,
 				D616CDE72645AD03003A40C4 /* Progress.swift in Sources */,
+				D616CDEB26464566003A40C4 /* SectionView.swift in Sources */,
+				D6443A59264673F9005A95E5 /* TextView.swift in Sources */,
 				D655839126456260005FB850 /* LinkView.swift in Sources */,
 				D616CDE926463E95003A40C4 /* Scroll.swift in Sources */,
 				D6282D5426451B4B000655AE /* FormView.swift in Sources */,
+				D616CDEF26464F71003A40C4 /* SingInWithAppleButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +404,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "swift-checking/swift-checking.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"swift-checking/Preview Content\"";
 				DEVELOPMENT_TEAM = VP52742XZ8;
@@ -388,6 +427,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "swift-checking/swift-checking.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"swift-checking/Preview Content\"";
 				DEVELOPMENT_TEAM = VP52742XZ8;

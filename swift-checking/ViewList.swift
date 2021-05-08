@@ -37,6 +37,15 @@ private let swiftUIViewSections: [SwiftUIViewSection] = [
                         SwiftUIView(name: "Picker", view:  AnyView(PickerView())),
                         SwiftUIView(name: "Picker2", view:  AnyView(PickerView2())),
                         SwiftUIView(name: "ProgressView", view:  AnyView(Progress())),
+                        SwiftUIView(name: "ScrollView", view:  AnyView(Scroll())),
+                        SwiftUIView(name: "Section", view:  AnyView(SectionView())),
+                        SwiftUIView(name: "SecureField/TextField", view:  AnyView(SecureFieldView())),
+                        SwiftUIView(name: "Slider", view:  AnyView(SliderView())),
+                        SwiftUIView(name: "Stepper", view:  AnyView(StepperView())),
+                        SwiftUIView(name: "TabView", view:  AnyView(Tab())),
+                        SwiftUIView(name: "Text", view:  AnyView(TextView())),
+                        SwiftUIView(name: "TextEditor", view:  AnyView(TextEditorView())),
+                        SwiftUIView(name: "Toggle", view:  AnyView(ToggleView())),
  ]
     )
 ]
