@@ -137,6 +137,15 @@
 		D6282D442644EBA3000655AE /* swiftui */ = {
 			isa = PBXGroup;
 			children = (
+				D6443A5F26468375005A95E5 /* Layout */,
+				D6443A5E26468361005A95E5 /* Controls */,
+			);
+			path = swiftui;
+			sourceTree = "<group>";
+		};
+		D6443A5E26468361005A95E5 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
 				D6282D452644EBBD000655AE /* ButtonView.swift */,
 				D6282D4926450585000655AE /* ColorPickerView.swift */,
 				D6282D4B264507DE000655AE /* DatePickerView.swift */,
@@ -163,7 +172,14 @@
 				D6443A5A2646754A005A95E5 /* TextEditorView.swift */,
 				D6443A5C2646788A005A95E5 /* ToggleView.swift */,
 			);
-			path = swiftui;
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		D6443A5F26468375005A95E5 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
