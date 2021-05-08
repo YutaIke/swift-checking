@@ -1,4 +1,8 @@
-## View Control
+<img src="https://user-images.githubusercontent.com/25924137/117531786-4f8c4680-b01f-11eb-8540-5bdaccb08a2d.gif" width="250">
+
+
+# Views 
+## Controls
 ### Button
 <img src="https://user-images.githubusercontent.com/25924137/117438823-0c719b00-af6d-11eb-98c1-e80ff0991677.gif" width="250">
 
@@ -58,6 +62,32 @@
 ```
 
 <img src="https://user-images.githubusercontent.com/25924137/117438860-14c9d600-af6d-11eb-8afd-5c6ff1033765.gif" width="250">
+
+```swift
+    @State private var date = Date()
+
+    var body: some View {
+        ScrollView(.vertical){
+            VStack {
+                DatePicker(selection: $date) {
+                    Text("CompactDatePickerStyle")
+                }.datePickerStyle(CompactDatePickerStyle())
+                
+                DatePicker(selection: $date) {
+                    Text("GraphicalDatePickerStyle")
+                }.datePickerStyle(GraphicalDatePickerStyle())
+
+                DatePicker(selection: $date) {
+                    Text("WheelDatePickerStyle")
+                }.datePickerStyle(WheelDatePickerStyle())
+
+                DatePicker(selection: $date) {
+                    Text("DefaultDatePickerStyle")
+                }.datePickerStyle(DefaultDatePickerStyle())
+            }
+        }
+    }
+```
 
 ### DisclosureGroup
 <img src="https://user-images.githubusercontent.com/25924137/117438865-15fb0300-af6d-11eb-9347-c9dd763dac5a.gif" width="250">
@@ -230,4 +260,416 @@
                 }
            }.navigationViewStyle(DoubleColumnNavigationViewStyle())            
         }.navigationBarTitle(Text("Navigation"))
+```
+
+### OutlineGroup
+<img src="https://user-images.githubusercontent.com/25924137/117474990-82d6c300-af96-11eb-904d-5d57c5ad7173.gif" width="250">
+
+```swift
+    struct FileItem: Hashable, Identifiable, CustomStringConvertible {
+        var id: Self { self }
+        var name: String
+        var children: [FileItem]? = nil
+        var description: String {
+            switch children {
+            case nil:
+                return "📄 \(name)"
+            case .some(let children):
+                return children.isEmpty ? "📂 \(name)" : "📁 \(name)"
+            }
+        }
+    }
+
+    let data =
+      FileItem(name: "users", children:
+        [FileItem(name: "user1234", children:
+          [FileItem(name: "Photos", children:
+            [FileItem(name: "photo001.jpg"),
+             FileItem(name: "photo002.jpg")]),
+           FileItem(name: "Movies", children:
+             [FileItem(name: "movie001.mp4")]),
+              FileItem(name: "Documents", children: [])
+          ]),
+         FileItem(name: "newuser", children:
+           [FileItem(name: "Documents", children: [])
+           ])
+        ])
+    
+    var body: some View {
+        VStack {
+            OutlineGroup(data, id: \.id, children: \.children) { item in
+                Text("\(item.description)")
+            }.padding()
+        }
+    }
+```
+
+### Picker
+<img src="https://user-images.githubusercontent.com/25924137/117484006-7c017d80-afa1-11eb-9c34-658a624826c7.gif" width="250">
+
+```swift
+enum Flavor: String, CaseIterable, Identifiable {
+    case chocolate
+    case vanilla
+    case strawberry
+    
+    var id: String { self.rawValue }
+}
+
+enum Topping: String, CaseIterable, Identifiable {
+    case nuts
+    case cookies
+    case blueberries
+    
+    var id: String { self.rawValue }
+}
+
+extension Flavor {
+    var suggestedTopping: Topping {
+        switch self {
+        case .chocolate: return .nuts
+        case .vanilla: return .cookies
+        case .strawberry: return .blueberries
+        }
+    }
+}
+
+struct PickerView: View {
+    @State private var selectedFlavor = Flavor.chocolate
+    @State private var suggestedTopping: Topping = .cookies
+    
+    var body: some View {
+        VStack {
+            Picker(selection: $selectedFlavor, label: Text("Flavor")) {
+                ForEach(Flavor.allCases) { flavor in
+                    Text(flavor.rawValue.capitalized)
+                }
+            }
+            Text("Selected flavor: \(selectedFlavor.rawValue)")
+            Divider()
+            Picker(selection: $selectedFlavor, label: Text("Suggest a topping for:")) {
+                ForEach(Flavor.allCases) { flavor in
+                    Text(flavor.rawValue.capitalized).tag(flavor.suggestedTopping)
+                }
+            }
+            Text("suggestedTopping: \(suggestedTopping.rawValue)")
+        }
+    }
+}
+```
+
+<img src="https://user-images.githubusercontent.com/25924137/117484014-7e63d780-afa1-11eb-9e0c-a4bcb83060e2.gif" width="250">
+
+
+```swift
+    @State private var selectedFlavor1 = Flavor.chocolate
+    @State private var selectedFlavor2 = Flavor.chocolate
+    @State private var selectedFlavor3 = Flavor.chocolate
+    @State private var selectedFlavor4 = Flavor.chocolate
+
+    var body: some View {
+        ScrollView(.vertical) {
+            VStack {
+                Picker(selection: $selectedFlavor1, label: Text("Flavor: MenuPickerStyle")) {
+                    Text("Chocolate").tag(Flavor.chocolate)
+                    Text("Vanilla").tag(Flavor.vanilla)
+                    Text("Strawberry").tag(Flavor.strawberry)
+                }.pickerStyle(MenuPickerStyle())
+                Text("Selected flavor: \(selectedFlavor1.rawValue)")
+                
+                Picker(selection: $selectedFlavor2, label: Text("Flavor: WheelPickerStyle")) {
+                    Text("Chocolate").tag(Flavor.chocolate)
+                    Text("Vanilla").tag(Flavor.vanilla)
+                    Text("Strawberry").tag(Flavor.strawberry)
+                }.pickerStyle(WheelPickerStyle())
+                Text("WheelPickerStyle Selected flavor: \(selectedFlavor2.rawValue)")
+
+                Picker(selection: $selectedFlavor3, label: Text("Flavor: WheelPickerStyle")) {
+                    Text("Chocolate").tag(Flavor.chocolate)
+                    Text("Vanilla").tag(Flavor.vanilla)
+                    Text("Strawberry").tag(Flavor.strawberry)
+                }.pickerStyle(InlinePickerStyle())
+                Text("InlinePickerStyle Selected flavor: \(selectedFlavor3.rawValue)")
+
+                Spacer(minLength: 50)
+                Picker(selection: $selectedFlavor4, label: Text("Flavor: SegmentedPickerStyle")) {
+                    Text("Chocolate").tag(Flavor.chocolate)
+                    Text("Vanilla").tag(Flavor.vanilla)
+                    Text("Strawberry").tag(Flavor.strawberry)
+                }.pickerStyle(SegmentedPickerStyle())
+                Text("SegmentedPickerStyle Selected flavor: \(selectedFlavor4.rawValue)")
+        }
+   }
+```
+
+### ProgressView
+<img src="https://user-images.githubusercontent.com/25924137/117488321-3a73d100-afa7-11eb-832c-3659ff5a60c6.gif" width="250">
+
+```swift
+    @State private var progress = 0.0
+    private let total = 1.0
+    
+    var body: some View {
+        VStack {
+            ProgressView("DefaultProgressViewStyle", value: progress, total: total)
+                .padding()
+            Button("More", action: {
+                if (progress + 0.05) < total {
+                    progress += 0.05
+                } else {
+                    progress = total
+                }
+            })
+            
+            ProgressView("LinearProgressViewStyle", value: 0.25, total: total)
+                .progressViewStyle(LinearProgressViewStyle())
+                .padding()
+
+            ProgressView("CircularProgressViewStyle", value: 0.75, total: total)
+                .progressViewStyle(CircularProgressViewStyle())
+                .padding()
+
+        }
+    }
+```
+
+### ScrollView
+<img src="https://user-images.githubusercontent.com/25924137/117526096-cdd7f100-affd-11eb-8d80-2d6f56fd86f1.gif" width="250">
+
+```swift
+        VStack {
+            ScrollView(.horizontal) {
+                Text(".horizontal test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test")
+            }.padding()
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                Text(".horizontal showIndicators: false test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test")
+            }.padding()
+
+            ScrollView {
+                ScrollViewReader { value in
+                    Button("Jump to 30") {
+                        withAnimation {
+                            value.scrollTo(30, anchor: .top)
+                        }
+                    }
+                    ForEach(1..<51) { index in
+                        Image(systemName: "\(index).square")
+                            .font(.largeTitle)
+                            .frame(height: 70)
+                            .id(index)
+                    }
+                }
+            }
+        }
+```
+
+### Section
+<img src="https://user-images.githubusercontent.com/25924137/117526810-91f35a80-b002-11eb-9b42-de8300fc3d1e.gif" width="250">
+
+
+```swift
+    @State private var selectedValue = "C++"
+    var body: some View {
+        VStack {
+            List {
+                Section(header: Text("header 果物"), footer: Text("footer 果物")) {
+                    Text("桃")
+                    Text("りんご")
+                    Text("みかん")
+                }
+                Section(header: Text("header 野菜"), footer: Text("footer 野菜")) {
+                    Text("きゅうり")
+                    Text("トマト")
+                    Text("なす")
+                }
+            }.frame(height:450)
+            Form {
+                Section(header: Text("header プログラミング言語"), footer: Text("footer プログラミング言語")) {
+                    Picker("プログラミング言語", selection: $selectedValue) {
+                        Text("C++").tag("C++")
+                        Text("Kotlin").tag("Kotlin")
+                        Text("Swift").tag("Swift")
+                    }
+                }
+            }
+        }
+    }
+```
+
+### SecureField / TextField
+<img src="https://user-images.githubusercontent.com/25924137/117527022-c4518780-b003-11eb-91ed-c6630802521c.gif" width="250">
+
+```swift
+    @State private var username: String = ""
+    @State private var password: String = ""
+
+    var body: some View {
+        VStack {
+            TextField(
+                "User name (email address)",
+                text: $username)
+                .autocapitalization(.none)
+                .disableAutocorrection(true)
+                .border(Color(UIColor.separator))
+                .padding()
+            SecureField(
+                "Password",
+                text: $password
+            ) {
+                print("ログイン")
+            }
+            .border(Color(UIColor.separator))
+            .padding()
+        }
+    }
+```
+
+### Scroll
+<img src="https://user-images.githubusercontent.com/25924137/117529845-02a37280-b015-11eb-9913-a1d2b6a8edd5.gif" width="250">
+
+```swift
+    @State private var speed = 50.0
+    @State private var isEditing = false
+
+    var body: some View {
+        VStack {
+            Slider(
+                value: $speed,
+                in: 0...100,
+                step: 5,
+                onEditingChanged: { editing in
+                    isEditing = editing
+                },
+                minimumValueLabel: Text("0"),
+                maximumValueLabel: Text("100")
+            ) {
+                Text("Speed")
+            }
+            Text("\(speed)")
+                .foregroundColor(isEditing ? .red : .blue)
+        }.padding()
+    }
+```
+
+### Stepper
+<img src="https://user-images.githubusercontent.com/25924137/117530207-d25cd380-b016-11eb-935a-ee96329680dd.gif" width="250">
+
+```swift
+    @State private var value1 = 0
+    @State private var value2 = 0
+    let colors: [Color] = [.orange, .red, .gray, .blue,
+                           .green, .purple, .pink]
+
+    func incrementStep() {
+        value1 += 1
+        if value1 >= colors.count { value1 = 0 }
+    }
+
+    func decrementStep() {
+        value1 -= 1
+        if value1 < 0 { value1 = colors.count - 1 }
+    }
+
+    var body: some View {
+        VStack {
+            Stepper(onIncrement: incrementStep,
+                onDecrement: decrementStep) {
+                Text("Value: \(value1) Color: \(colors[value1].description)")
+            }
+            .padding(10)
+            .background(colors[value1])
+            
+            Stepper(value: $value2,
+                    in: 1...50,
+                    step: 5) {
+                Text("Current: \(value2) in 1...50 stepping by 5")
+            }.padding(10)
+        }
+    }
+```
+
+### TabView
+<img src="https://user-images.githubusercontent.com/25924137/117530611-033e0800-b019-11eb-9c89-f93c08b11b01.gif" width="250">
+
+```swift
+    @State private var selection = 1
+    var body: some View {
+        VStack {
+            Text("selection: \(selection)")
+
+            TabView(selection: $selection) {
+                Text("The First Tab")
+                    .tabItem {
+                        Image(systemName: "1.square.fill")
+                        Text("First")
+                    }
+                    .tag(1)
+                Text("Another Tab")
+                    .tabItem {
+                        Image(systemName: "2.square.fill")
+                        Text("Second")
+                    }
+                    .tag(2)
+                Text("The Last Tab")
+                    .tabItem {
+                        Image(systemName: "3.square.fill")
+                        Text("Third")
+                    }
+                    .tag(3)
+            }
+            .font(.headline)
+            
+        }
+    }
+```
+
+### Text
+<img width="250" alt="Text" src="https://user-images.githubusercontent.com/25924137/117530858-68dec400-b01a-11eb-996d-0ff32aa6f27a.png">
+
+```swift
+    var body: some View {
+        VStack {
+            Text("Hamlet")
+                .font(.title)
+                .padding()
+            
+            Text("by William Shakespeare")
+                .font(.system(size: 12, weight: .light, design: .serif))
+                .italic()
+                .padding()
+
+            Text("Brevity is the soul of wit.")
+                .frame(width: 100)
+                .lineLimit(1)
+                .padding()
+        }
+    }
+```
+
+### TextEditor
+<img src="https://user-images.githubusercontent.com/25924137/117531108-e0612300-b01b-11eb-9bd8-fe9ce1ad23ab.gif" width="250">
+
+```swift
+    @State private var fullText: String = "This is some editable text..."
+
+    var body: some View {
+        TextEditor(text: $fullText)
+            .foregroundColor(Color.gray)
+            .font(.custom("HelveticaNeue", size: 18))
+            .lineSpacing(5)
+    }
+```
+
+### Toggle
+<img src="https://user-images.githubusercontent.com/25924137/117531587-1acbbf80-b01e-11eb-91a5-088c7e0423c7.gif" width="250">
+
+```swift
+    @State private var vibrateOnRing = true
+    
+    var body: some View {
+        Toggle("Vibrate on Ring", isOn: $vibrateOnRing)
+            .toggleStyle(SwitchToggleStyle())
+            .padding()
+    }
 ```
