@@ -1,3 +1,5 @@
+SwiftUIに内包されているStructをまとめています。動作確認用です。
+
 <img src="https://user-images.githubusercontent.com/25924137/117531786-4f8c4680-b01f-11eb-8540-5bdaccb08a2d.gif" width="250">
 
 
