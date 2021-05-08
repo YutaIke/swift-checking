@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SwiftUIView: Identifiable {
     let name: String
+    let view: AnyView
     let id = UUID()
 }
 
@@ -21,18 +22,22 @@ struct SwiftUIViewSection: Identifiable {
 private let swiftUIViewSections: [SwiftUIViewSection] = [
     SwiftUIViewSection(name: "Controls",
                        views: [
-                        SwiftUIView(name: "Button"),
-                        SwiftUIView(name: "ColorPicker"),
-                        SwiftUIView(name: "DatePicker"),
-                        SwiftUIView(name: "DatePicker2"),
-                        SwiftUIView(name: "DisclosureGroup"),
-                        SwiftUIView(name: "EditButton"),
-                        SwiftUIView(name: "Form"),
-                        SwiftUIView(name: "GroupBox"),
-                        SwiftUIView(name: "Label"),
-                        SwiftUIView(name: "Link"),
-                        SwiftUIView(name: "NavigationView/NavigationLink"),
-                       ]
+                        SwiftUIView(name: "Button", view: AnyView(ButtonView())),
+                        SwiftUIView(name: "ColorPicker", view: AnyView(ColorPickerView())),
+                        SwiftUIView(name: "DatePicker", view: AnyView(DatePickerView())),
+                        SwiftUIView(name: "DatePicker2", view: AnyView(DatePickerView2())),
+                        SwiftUIView(name: "DisclosureGroup",view: AnyView(DisclosureGroupView())),
+                        SwiftUIView(name: "EditButton", view: AnyView(EditButtonView())),
+                        SwiftUIView(name: "Form", view: AnyView(FormView())),
+                        SwiftUIView(name: "GroupBox", view: AnyView(GroupBoxView())),
+                        SwiftUIView(name: "Label", view: AnyView(LabelView())),
+                        SwiftUIView(name: "Link", view: AnyView(LinkView())),
+                        SwiftUIView(name: "NavigationView/NavigationLink", view: AnyView(Navigation())),
+                        SwiftUIView(name: "OutlineGroup", view:  AnyView(OutlineGroupView())),
+                        SwiftUIView(name: "Picker", view:  AnyView(PickerView())),
+                        SwiftUIView(name: "Picker2", view:  AnyView(PickerView2())),
+                        SwiftUIView(name: "ProgressView", view:  AnyView(Progress())),
+ ]
     )
 ]
 
@@ -43,55 +48,8 @@ struct ViewList: View {
                 ForEach(swiftUIViewSections) { section in
                     Section(header: Text(section.name), content: {
                         ForEach(section.views) { swiftUIView in
-                            switch swiftUIView.name {
-                            case "Button":
-                                NavigationLink(destination: ButtonView()) {
-                                    Text("\(swiftUIView.name)")
-                                }
-                            case "ColorPicker":
-                                NavigationLink(destination: ColorPickerView()) {
-                                    Text("\(swiftUIView.name)")
-                                }
-                            case "DatePicker":
-                                NavigationLink(destination: DatePickerView()) {
-                                    Text("\(swiftUIView.name)")
-                                }
-                            case "DatePicker2":
-                                NavigationLink(destination: DatePickerView2()) {
-                                    Text("\(swiftUIView.name)")
-                                }
-                            case "DisclosureGroup":
-                                NavigationLink(destination: DisclosureGroupView()) {
-                                    Text("\(swiftUIView.name)")
-                                }
-                            case "EditButton":
-                                NavigationLink(destination: EditButtonView()) {
-                                    Text("\(swiftUIView.name)")
-                                }
-                            case "Form":
-                                NavigationLink(destination: FormView()) {
-                                    Text("\(swiftUIView.name)")
-                                }
-                            case "GroupBox":
-                                NavigationLink(destination: GroupBoxView()) {
-                                    Text("\(swiftUIView.name)")
-                                }
-                            case "Label":
-                                NavigationLink(destination: LabelView()) {
-                                    Text("\(swiftUIView.name)")
-                                }
-                            case "Link":
-                                NavigationLink(destination: LinkView()) {
-                                    Text("\(swiftUIView.name)")
-                                }
-                            case "NavigationView/NavigationLink":
-                                NavigationLink(destination: Navigation()) {
-                                    Text("\(swiftUIView.name)")
-                                }
-                            default:
-                                NavigationLink(destination: DisclosureGroupView()) {
-                                    Text("\(swiftUIView.name)")
-                                }
+                            NavigationLink(destination: swiftUIView.view) {
+                                Text("\(swiftUIView.name)")
                             }
                         }
                     })
