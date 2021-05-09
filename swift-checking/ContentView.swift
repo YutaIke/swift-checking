@@ -15,7 +15,7 @@ struct ContentView: View {
                 Image(systemName: "dot.square")
                 Text("Views")
             }.tag(1)
-            Text("Tab Content 2").tabItem {
+            ModifierList().tabItem {
                 Image(systemName: "slider.horizontal.3")
                 Text("Modifier")
             }.tag(2)

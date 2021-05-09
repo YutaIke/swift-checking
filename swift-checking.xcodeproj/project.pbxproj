@@ -17,6 +17,15 @@
 		D616CDED26464D61003A40C4 /* SecureFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D616CDEC26464D61003A40C4 /* SecureFieldView.swift */; };
 		D616CDEF26464F71003A40C4 /* SingInWithAppleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D616CDEE26464F71003A40C4 /* SingInWithAppleButtonView.swift */; };
 		D616CDF22646541E003A40C4 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D616CDF12646541E003A40C4 /* SliderView.swift */; };
+		D61B2AC42647FF2B0050215D /* FontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61B2AC32647FF2B0050215D /* FontModifier.swift */; };
+		D61B2AC7264802D00050215D /* LineLimitModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61B2AC6264802D00050215D /* LineLimitModifier.swift */; };
+		D61B2AC9264802DF0050215D /* ModifierList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61B2AC8264802DF0050215D /* ModifierList.swift */; };
+		D61B2ACB264807B00050215D /* TruncationModeModifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61B2ACA264807B00050215D /* TruncationModeModifierView.swift */; };
+		D61B2ACD264809350050215D /* FixedSizeModifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61B2ACC264809350050215D /* FixedSizeModifierView.swift */; };
+		D61B2AD126482E820050215D /* ForegroundColorModifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61B2AD026482E820050215D /* ForegroundColorModifierView.swift */; };
+		D61B2AD426482F530050215D /* KerningModifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61B2AD326482F530050215D /* KerningModifierView.swift */; };
+		D61B2AD6264831610050215D /* FontWeightModifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61B2AD5264831610050215D /* FontWeightModifierView.swift */; };
+		D61B2AD8264832F80050215D /* UnderlineModifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61B2AD7264832F80050215D /* UnderlineModifierView.swift */; };
 		D6282D312644EB90000655AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6282D302644EB90000655AE /* AppDelegate.swift */; };
 		D6282D332644EB90000655AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6282D322644EB90000655AE /* SceneDelegate.swift */; };
 		D6282D352644EB90000655AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6282D342644EB90000655AE /* ContentView.swift */; };
@@ -41,6 +50,7 @@
 		D655839126456260005FB850 /* LinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655839026456260005FB850 /* LinkView.swift */; };
 		D655839326456681005FB850 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655839226456681005FB850 /* Navigation.swift */; };
 		D65AC3C52647E29D000F5D07 /* GeometryReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65AC3C42647E29D000F5D07 /* GeometryReaderView.swift */; };
+		D65AC3C92647F084000F5D07 /* HStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65AC3C82647F084000F5D07 /* HStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +65,15 @@
 		D616CDEE26464F71003A40C4 /* SingInWithAppleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInWithAppleButtonView.swift; sourceTree = "<group>"; };
 		D616CDF02646526B003A40C4 /* swift-checking.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "swift-checking.entitlements"; sourceTree = "<group>"; };
 		D616CDF12646541E003A40C4 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		D61B2AC32647FF2B0050215D /* FontModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontModifier.swift; sourceTree = "<group>"; };
+		D61B2AC6264802D00050215D /* LineLimitModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineLimitModifier.swift; sourceTree = "<group>"; };
+		D61B2AC8264802DF0050215D /* ModifierList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifierList.swift; sourceTree = "<group>"; };
+		D61B2ACA264807B00050215D /* TruncationModeModifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TruncationModeModifierView.swift; sourceTree = "<group>"; };
+		D61B2ACC264809350050215D /* FixedSizeModifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedSizeModifierView.swift; sourceTree = "<group>"; };
+		D61B2AD026482E820050215D /* ForegroundColorModifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForegroundColorModifierView.swift; sourceTree = "<group>"; };
+		D61B2AD326482F530050215D /* KerningModifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KerningModifierView.swift; sourceTree = "<group>"; };
+		D61B2AD5264831610050215D /* FontWeightModifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontWeightModifierView.swift; sourceTree = "<group>"; };
+		D61B2AD7264832F80050215D /* UnderlineModifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineModifierView.swift; sourceTree = "<group>"; };
 		D6282D2D2644EB90000655AE /* swift-checking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-checking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6282D302644EB90000655AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6282D322644EB90000655AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +100,7 @@
 		D655839026456260005FB850 /* LinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkView.swift; sourceTree = "<group>"; };
 		D655839226456681005FB850 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		D65AC3C42647E29D000F5D07 /* GeometryReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderView.swift; sourceTree = "<group>"; };
+		D65AC3C82647F084000F5D07 /* HStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +114,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D61B2AC5264801E80050215D /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				D61B2AC32647FF2B0050215D /* FontModifier.swift */,
+				D61B2AC6264802D00050215D /* LineLimitModifier.swift */,
+				D61B2ACA264807B00050215D /* TruncationModeModifierView.swift */,
+				D61B2ACC264809350050215D /* FixedSizeModifierView.swift */,
+				D61B2AD326482F530050215D /* KerningModifierView.swift */,
+				D61B2AD5264831610050215D /* FontWeightModifierView.swift */,
+				D61B2AD7264832F80050215D /* UnderlineModifierView.swift */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		D61B2AD226482ED50050215D /* Effects */ = {
+			isa = PBXGroup;
+			children = (
+				D61B2AD026482E820050215D /* ForegroundColorModifierView.swift */,
+			);
+			path = Effects;
+			sourceTree = "<group>";
+		};
 		D6282D242644EB90000655AE = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +162,7 @@
 				D6282D322644EB90000655AE /* SceneDelegate.swift */,
 				D6282D342644EB90000655AE /* ContentView.swift */,
 				D6282D472644FA5C000655AE /* ViewList.swift */,
+				D61B2AC8264802DF0050215D /* ModifierList.swift */,
 				D6282D362644EB92000655AE /* Assets.xcassets */,
 				D6282D3B2644EB92000655AE /* LaunchScreen.storyboard */,
 				D6282D3E2644EB92000655AE /* Info.plist */,
@@ -181,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				D65AC3C42647E29D000F5D07 /* GeometryReaderView.swift */,
+				D65AC3C82647F084000F5D07 /* HStackView.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -213,6 +257,8 @@
 		D65AC3C72647F00A000F5D07 /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
+				D61B2AD226482ED50050215D /* Effects */,
+				D61B2AC5264801E80050215D /* Text */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -292,27 +338,37 @@
 				D6282D4E26450DE1000655AE /* DatePickerView2.swift in Sources */,
 				D6282D5626451F14000655AE /* GroupBoxView.swift in Sources */,
 				D6282D482644FA5C000655AE /* ViewList.swift in Sources */,
+				D61B2AC7264802D00050215D /* LineLimitModifier.swift in Sources */,
 				D6282D4A26450585000655AE /* ColorPickerView.swift in Sources */,
 				D6282D332644EB90000655AE /* SceneDelegate.swift in Sources */,
 				D6443A5B2646754A005A95E5 /* TextEditorView.swift in Sources */,
+				D61B2AD6264831610050215D /* FontWeightModifierView.swift in Sources */,
 				D6282D4C264507DE000655AE /* DatePickerView.swift in Sources */,
 				D65AC3C52647E29D000F5D07 /* GeometryReaderView.swift in Sources */,
 				D6443A5726467044005A95E5 /* Tab.swift in Sources */,
 				D6282D352644EB90000655AE /* ContentView.swift in Sources */,
 				D6282D462644EBBD000655AE /* ButtonView.swift in Sources */,
+				D61B2AC42647FF2B0050215D /* FontModifier.swift in Sources */,
 				D616CDF22646541E003A40C4 /* SliderView.swift in Sources */,
 				D616CDE326459904003A40C4 /* PickerView.swift in Sources */,
 				D6443A5526466C3D005A95E5 /* StepperView.swift in Sources */,
+				D61B2AD126482E820050215D /* ForegroundColorModifierView.swift in Sources */,
+				D61B2AD426482F530050215D /* KerningModifierView.swift in Sources */,
 				D616CDE126458C35003A40C4 /* OutlineGroupView.swift in Sources */,
 				D616CDE52645A066003A40C4 /* PickerView2.swift in Sources */,
+				D61B2AD8264832F80050215D /* UnderlineModifierView.swift in Sources */,
 				D6443A5D2646788A005A95E5 /* ToggleView.swift in Sources */,
 				D616CDED26464D61003A40C4 /* SecureFieldView.swift in Sources */,
 				D655838F2645538F005FB850 /* LabelView.swift in Sources */,
 				D6282D52264514B1000655AE /* EditButtonView.swift in Sources */,
+				D61B2ACD264809350050215D /* FixedSizeModifierView.swift in Sources */,
 				D6282D5026450F77000655AE /* DisclosureGroupView.swift in Sources */,
 				D655839326456681005FB850 /* Navigation.swift in Sources */,
+				D61B2ACB264807B00050215D /* TruncationModeModifierView.swift in Sources */,
 				D616CDE72645AD03003A40C4 /* Progress.swift in Sources */,
+				D61B2AC9264802DF0050215D /* ModifierList.swift in Sources */,
 				D616CDEB26464566003A40C4 /* SectionView.swift in Sources */,
+				D65AC3C92647F084000F5D07 /* HStackView.swift in Sources */,
 				D6443A59264673F9005A95E5 /* TextView.swift in Sources */,
 				D655839126456260005FB850 /* LinkView.swift in Sources */,
 				D616CDE926463E95003A40C4 /* Scroll.swift in Sources */,

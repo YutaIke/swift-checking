@@ -50,7 +50,9 @@ private let swiftUIViewSections: [SwiftUIViewSection] = [
                     ),
     SwiftUIViewSection(name: "Layout",
                        views: [
-                        SwiftUIView(name: "GeometryReader", view: AnyView(GeometryReaderView()))])
+                        SwiftUIView(name: "GeometryReader", view: AnyView(GeometryReaderView())),
+                        SwiftUIView(name: "HStack", view: AnyView(HStackView())),
+                       ]),
 ]
 
 struct ViewList: View {
