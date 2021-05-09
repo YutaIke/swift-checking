@@ -40,6 +40,7 @@
 		D655838F2645538F005FB850 /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655838E2645538F005FB850 /* LabelView.swift */; };
 		D655839126456260005FB850 /* LinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655839026456260005FB850 /* LinkView.swift */; };
 		D655839326456681005FB850 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655839226456681005FB850 /* Navigation.swift */; };
+		D65AC3C52647E29D000F5D07 /* GeometryReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65AC3C42647E29D000F5D07 /* GeometryReaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 		D655838E2645538F005FB850 /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
 		D655839026456260005FB850 /* LinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkView.swift; sourceTree = "<group>"; };
 		D655839226456681005FB850 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		D65AC3C42647E29D000F5D07 /* GeometryReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,8 +139,8 @@
 		D6282D442644EBA3000655AE /* swiftui */ = {
 			isa = PBXGroup;
 			children = (
-				D6443A5F26468375005A95E5 /* Layout */,
-				D6443A5E26468361005A95E5 /* Controls */,
+				D65AC3C72647F00A000F5D07 /* Modifiers */,
+				D65AC3C62647EFFF000F5D07 /* Views */,
 			);
 			path = swiftui;
 			sourceTree = "<group>";
@@ -178,8 +180,41 @@
 		D6443A5F26468375005A95E5 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
+				D65AC3C42647E29D000F5D07 /* GeometryReaderView.swift */,
 			);
 			path = Layout;
+			sourceTree = "<group>";
+		};
+		D6443A602646842F005A95E5 /* Paints */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Paints;
+			sourceTree = "<group>";
+		};
+		D6443A6126468438005A95E5 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		D65AC3C62647EFFF000F5D07 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D6443A6126468438005A95E5 /* Other */,
+				D6443A602646842F005A95E5 /* Paints */,
+				D6443A5F26468375005A95E5 /* Layout */,
+				D6443A5E26468361005A95E5 /* Controls */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D65AC3C72647F00A000F5D07 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +296,7 @@
 				D6282D332644EB90000655AE /* SceneDelegate.swift in Sources */,
 				D6443A5B2646754A005A95E5 /* TextEditorView.swift in Sources */,
 				D6282D4C264507DE000655AE /* DatePickerView.swift in Sources */,
+				D65AC3C52647E29D000F5D07 /* GeometryReaderView.swift in Sources */,
 				D6443A5726467044005A95E5 /* Tab.swift in Sources */,
 				D6282D352644EB90000655AE /* ContentView.swift in Sources */,
 				D6282D462644EBBD000655AE /* ButtonView.swift in Sources */,
