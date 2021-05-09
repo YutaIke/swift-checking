@@ -46,8 +46,11 @@ private let swiftUIViewSections: [SwiftUIViewSection] = [
                         SwiftUIView(name: "Text", view:  AnyView(TextView())),
                         SwiftUIView(name: "TextEditor", view:  AnyView(TextEditorView())),
                         SwiftUIView(name: "Toggle", view:  AnyView(ToggleView())),
- ]
-    )
+                       ]
+                    ),
+    SwiftUIViewSection(name: "Layout",
+                       views: [
+                        SwiftUIView(name: "GeometryReader", view: AnyView(GeometryReaderView()))])
 ]
 
 struct ViewList: View {
