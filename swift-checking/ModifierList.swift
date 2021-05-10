@@ -20,19 +20,31 @@ struct SwiftUIModifierSection: Identifiable {
 }
 
 private let swiftUIViewSections: [SwiftUIModifierSection] = [
+    SwiftUIModifierSection(name: "Controls",
+                       views: [
+                        SwiftUIModifier(name: "Action Sheet", view: AnyView(ActionSheetModifierView())),
+                        SwiftUIModifier(name: "Alert", view: AnyView(AlertModifierView())),
+                        SwiftUIModifier(name: "Sheet", view: AnyView(SheetModifierView())),
+                        ]),
     SwiftUIModifierSection(name: "Effects",
                        views: [
-                        SwiftUIModifier(name: "ForegroundColor", view: AnyView(ForegroundColorModifierView())),
+                        SwiftUIModifier(name: "Foreground Color", view: AnyView(ForegroundColorModifierView())),
+                        ]),
+    SwiftUIModifierSection(name: "Navigation Bar",
+                       views: [
+                        SwiftUIModifier(name: "NavigationBarTitleDisplayMode", view: AnyView(NavigationBarTitleModifierView())),
                         ]),
 
     SwiftUIModifierSection(name: "Text",
                        views: [
-                        SwiftUIModifier(name: "FixedSize", view: AnyView(FixedSizeModifierView())),
+                        SwiftUIModifier(name: "Fixed Size", view: AnyView(FixedSizeModifierView())),
                         SwiftUIModifier(name: "Font", view: AnyView(FontModifier())),
-                        SwiftUIModifier(name: "FontWeight", view: AnyView(FontWeightModifierView())),
+                        SwiftUIModifier(name: "Font Weight", view: AnyView(FontWeightModifierView())),
                         SwiftUIModifier(name: "Kerning", view: AnyView(KerningModifierView())),
-                        SwiftUIModifier(name: "LineLimit", view: AnyView(LineLimitModifier())),
-                        SwiftUIModifier(name: "TruncationMode", view: AnyView(TruncationModeModifierView())),
+                        SwiftUIModifier(name: "Line Limit", view: AnyView(LineLimitModifier())),
+                        SwiftUIModifier(name: "Line Spacing", view: AnyView(LineSpacingModifierView())),
+                        SwiftUIModifier(name: "Strikethrough", view: AnyView(StrikethroughModifierView())),
+                        SwiftUIModifier(name: "Truncation Mode", view: AnyView(TruncationModeModifierView())),
                         SwiftUIModifier(name: "Underline", view: AnyView(UnderlineModifierView())),
                        ])
     ]
