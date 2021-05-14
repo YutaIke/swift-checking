@@ -246,7 +246,7 @@ struct ZStackView: View {
                             }
                             """#)
                         
-                    }
+                    }.padding()
                 }
             }
         }

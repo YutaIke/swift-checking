@@ -30,6 +30,13 @@ private let swiftUIViewSections: [SwiftUIModifierSection] = [
                        views: [
                         SwiftUIModifier(name: "Foreground Color", view: AnyView(ForegroundColorModifierView())),
                         ]),
+    SwiftUIModifierSection(name: "Gestures",
+                       views: [
+                        SwiftUIModifier(name: "Gesture", view: AnyView(GestureView())),
+                        SwiftUIModifier(name: "HighPriorityGesture", view: AnyView(HighPriorityGestureView())),
+                        SwiftUIModifier(name: "SimultaneousGesture", view: AnyView(SimultaneousGestureView())),
+                        ]),
+
     SwiftUIModifierSection(name: "Navigation Bar",
                        views: [
                         SwiftUIModifier(name: "NavigationBarTitleDisplayMode", view: AnyView(NavigationBarTitleModifierView())),
@@ -47,6 +54,7 @@ private let swiftUIViewSections: [SwiftUIModifierSection] = [
                         SwiftUIModifier(name: "Truncation Mode", view: AnyView(TruncationModeModifierView())),
                         SwiftUIModifier(name: "Underline", view: AnyView(UnderlineModifierView())),
                        ])
+    
     ]
 
 

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EditButtonView: View {
-    @Environment(\.editMode) var editMode
+    @State private var editMode = EditMode.inactive
     @State private var fruits = [
         "Apple",
         "Banana",
@@ -17,26 +17,28 @@ struct EditButtonView: View {
     ]
 
     var body: some View {
-        ScrollView(.vertical) {
-            VStack {
-                NavigationView{
-                    List {
-                        ForEach(
-                            fruits,
-                            id: \.self
-                        ) { fruit in
-                            Text(fruit)
-                        }
-                        .onDelete { self.fruits.remove(atOffsets: $0) }
-                        .onMove { self.fruits.move(fromOffsets: $0, toOffset: $1) }
+        VStack {
+            NavigationView{
+                List {
+                    ForEach(
+                        fruits,
+                        id: \.self
+                    ) { fruit in
+                        Text(fruit)
                     }
-                    .navigationTitle("Fruits")
-                    .toolbar { EditButton() }
+                    .onDelete { self.fruits.remove(atOffsets: $0) }
+                    .onMove { self.fruits.move(fromOffsets: $0, toOffset: $1) }
                 }
-                Text(String(describing: editMode?.wrappedValue))
-                            
-                Divider()
+                .navigationTitle("Fruits")
+                .toolbar { EditButton() }
+                .environment(\.editMode, $editMode)
+            }
+            Text(String(describing: "editMode: \(editMode)"))
+                        
+            Divider()
+            DisclosureGroup("Source Code") {
                 Text(#"""
+                    @State private var editMode = EditMode.inactive
                     @State private var fruits = [
                         "Apple",
                         "Banana",
@@ -45,35 +47,32 @@ struct EditButtonView: View {
                     ]
 
                     var body: some View {
-                        NavigationView{
-                            List {
-                                ForEach(
-                                    fruits,
-                                    id: \.self
-                                ) { fruit in
-                                    Text(fruit)
+                        ScrollView(.vertical) {
+                            VStack {
+                                NavigationView{
+                                    List {
+                                        ForEach(
+                                            fruits,
+                                            id: \.self
+                                        ) { fruit in
+                                            Text(fruit)
+                                        }
+                                        .onDelete { self.fruits.remove(atOffsets: $0) }
+                                        .onMove { self.fruits.move(fromOffsets: $0, toOffset: $1) }
+                                    }
+                                    .navigationTitle("Fruits")
+                                    .toolbar { EditButton() }
+                                    .environment(\.editMode, $editMode)
                                 }
-                                .onDelete { self.deleteFruit(at :$0) }
-                                .onMove { self.moveFruit(from: $0, to: $1) }
+                                Text(String(describing: "editMode: \(editMode)"))
                             }
-                            .navigationTitle("Fruits")
-                            .toolbar { EditButton() }
-                        }
-                        switch editMode?.wrappedValue {
-                        case .active:
-                            Text("EditMode: .active")
-                        case .inactive:
-                            Text("EditMode: .inactive")
-                        case .transient:
-                            Text("EditMode: .transient")
-                        case .none:
-                            Text("EditMode: .none")
-                        default:
-                            Text("EditMode: ")
                         }
                     }
+                    
                     """#)
-            }
+                
+            }.padding()
+
         }
     }
 }

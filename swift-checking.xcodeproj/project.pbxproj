@@ -32,6 +32,7 @@
 		D6183003264914540099F8CF /* ZStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6183002264914540099F8CF /* ZStackView.swift */; };
 		D6183005264916DD0099F8CF /* LazyHGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6183004264916DD0099F8CF /* LazyHGridView.swift */; };
 		D618300726491DB60099F8CF /* LazyVGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D618300626491DB60099F8CF /* LazyVGridView.swift */; };
+		D6183021264BCBAD0099F8CF /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6183020264BCBAD0099F8CF /* MapView.swift */; };
 		D61B2AC42647FF2B0050215D /* FontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61B2AC32647FF2B0050215D /* FontModifier.swift */; };
 		D61B2AC7264802D00050215D /* LineLimitModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61B2AC6264802D00050215D /* LineLimitModifier.swift */; };
 		D61B2AC9264802DF0050215D /* ModifierList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61B2AC8264802DF0050215D /* ModifierList.swift */; };
@@ -66,6 +67,10 @@
 		D655839326456681005FB850 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655839226456681005FB850 /* Navigation.swift */; };
 		D65AC3C52647E29D000F5D07 /* GeometryReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65AC3C42647E29D000F5D07 /* GeometryReaderView.swift */; };
 		D65AC3C92647F084000F5D07 /* HStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65AC3C82647F084000F5D07 /* HStackView.swift */; };
+		D6A1BF80264E924F004B6B23 /* PathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1BF7F264E924F004B6B23 /* PathView.swift */; };
+		D6A1BF82264E9CCB004B6B23 /* GestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1BF81264E9CCB004B6B23 /* GestureView.swift */; };
+		D6A1BF84264EA1EB004B6B23 /* HighPriorityGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1BF83264EA1EB004B6B23 /* HighPriorityGestureView.swift */; };
+		D6A1BF86264EA436004B6B23 /* SimultaneousGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1BF85264EA436004B6B23 /* SimultaneousGestureView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +100,7 @@
 		D6183002264914540099F8CF /* ZStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZStackView.swift; sourceTree = "<group>"; };
 		D6183004264916DD0099F8CF /* LazyHGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyHGridView.swift; sourceTree = "<group>"; };
 		D618300626491DB60099F8CF /* LazyVGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVGridView.swift; sourceTree = "<group>"; };
+		D6183020264BCBAD0099F8CF /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		D61B2AC32647FF2B0050215D /* FontModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontModifier.swift; sourceTree = "<group>"; };
 		D61B2AC6264802D00050215D /* LineLimitModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineLimitModifier.swift; sourceTree = "<group>"; };
 		D61B2AC8264802DF0050215D /* ModifierList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifierList.swift; sourceTree = "<group>"; };
@@ -131,6 +137,10 @@
 		D655839226456681005FB850 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		D65AC3C42647E29D000F5D07 /* GeometryReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderView.swift; sourceTree = "<group>"; };
 		D65AC3C82647F084000F5D07 /* HStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HStackView.swift; sourceTree = "<group>"; };
+		D6A1BF7F264E924F004B6B23 /* PathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathView.swift; sourceTree = "<group>"; };
+		D6A1BF81264E9CCB004B6B23 /* GestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureView.swift; sourceTree = "<group>"; };
+		D6A1BF83264EA1EB004B6B23 /* HighPriorityGestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighPriorityGestureView.swift; sourceTree = "<group>"; };
+		D6A1BF85264EA436004B6B23 /* SimultaneousGestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimultaneousGestureView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +154,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D6079C46264E589700CAE754 /* Gestures */ = {
+			isa = PBXGroup;
+			children = (
+				D6A1BF81264E9CCB004B6B23 /* GestureView.swift */,
+				D6A1BF83264EA1EB004B6B23 /* HighPriorityGestureView.swift */,
+				D6A1BF85264EA436004B6B23 /* SimultaneousGestureView.swift */,
+			);
+			path = Gestures;
+			sourceTree = "<group>";
+		};
 		D60D7BA926483FE40010500A /* NavigationBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +180,14 @@
 				D60D7BAF2648470F0010500A /* SheetModifierView.swift */,
 			);
 			path = Controls;
+			sourceTree = "<group>";
+		};
+		D6183022264BCCD10099F8CF /* MapKit */ = {
+			isa = PBXGroup;
+			children = (
+				D6183020264BCBAD0099F8CF /* MapView.swift */,
+			);
+			path = MapKit;
 			sourceTree = "<group>";
 		};
 		D61B2AC5264801E80050215D /* Text */ = {
@@ -206,6 +234,7 @@
 		D6282D2F2644EB90000655AE /* swift-checking */ = {
 			isa = PBXGroup;
 			children = (
+				D6183022264BCCD10099F8CF /* MapKit */,
 				D616CDF02646526B003A40C4 /* swift-checking.entitlements */,
 				D6282D442644EBA3000655AE /* swiftui */,
 				D6282D302644EB90000655AE /* AppDelegate.swift */,
@@ -298,6 +327,7 @@
 			children = (
 				D60D7BA5264837A20010500A /* ImageView.swift */,
 				D60D7BA726483EBD0010500A /* RectangleView.swift */,
+				D6A1BF7F264E924F004B6B23 /* PathView.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -316,6 +346,7 @@
 		D65AC3C72647F00A000F5D07 /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
+				D6079C46264E589700CAE754 /* Gestures */,
 				D60D7BAC2648428F0010500A /* Controls */,
 				D60D7BA926483FE40010500A /* NavigationBar */,
 				D61B2AD226482ED50050215D /* Effects */,
@@ -396,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6282D312644EB90000655AE /* AppDelegate.swift in Sources */,
+				D6A1BF80264E924F004B6B23 /* PathView.swift in Sources */,
 				D6282D4E26450DE1000655AE /* DatePickerView2.swift in Sources */,
 				D6282D5626451F14000655AE /* GroupBoxView.swift in Sources */,
 				D6183005264916DD0099F8CF /* LazyHGridView.swift in Sources */,
@@ -422,6 +454,7 @@
 				D61B2AD126482E820050215D /* ForegroundColorModifierView.swift in Sources */,
 				D618300726491DB60099F8CF /* LazyVGridView.swift in Sources */,
 				D61B2AD426482F530050215D /* KerningModifierView.swift in Sources */,
+				D6A1BF84264EA1EB004B6B23 /* HighPriorityGestureView.swift in Sources */,
 				D616CDE126458C35003A40C4 /* OutlineGroupView.swift in Sources */,
 				D616CDE52645A066003A40C4 /* PickerView2.swift in Sources */,
 				D60D7BB226484C900010500A /* ActionSheetModifierView.swift in Sources */,
@@ -436,14 +469,17 @@
 				D61B2ACD264809350050215D /* FixedSizeModifierView.swift in Sources */,
 				D6282D5026450F77000655AE /* DisclosureGroupView.swift in Sources */,
 				D655839326456681005FB850 /* Navigation.swift in Sources */,
+				D6A1BF82264E9CCB004B6B23 /* GestureView.swift in Sources */,
 				D60D7BA4264836AB0010500A /* LineSpacingModifierView.swift in Sources */,
 				D61B2ACB264807B00050215D /* TruncationModeModifierView.swift in Sources */,
 				D616CDE72645AD03003A40C4 /* Progress.swift in Sources */,
+				D6A1BF86264EA436004B6B23 /* SimultaneousGestureView.swift in Sources */,
 				D61B2AC9264802DF0050215D /* ModifierList.swift in Sources */,
 				D616CDEB26464566003A40C4 /* SectionView.swift in Sources */,
 				D65AC3C92647F084000F5D07 /* HStackView.swift in Sources */,
 				D60D7BAB264840020010500A /* NavigationBarTitleModifierView.swift in Sources */,
 				D6182FFC2648EDEA0099F8CF /* LazyHStackView.swift in Sources */,
+				D6183021264BCBAD0099F8CF /* MapView.swift in Sources */,
 				D6443A59264673F9005A95E5 /* TextView.swift in Sources */,
 				D655839126456260005FB850 /* LinkView.swift in Sources */,
 				D616CDE926463E95003A40C4 /* Scroll.swift in Sources */,

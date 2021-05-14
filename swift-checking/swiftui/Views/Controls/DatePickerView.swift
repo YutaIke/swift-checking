@@ -42,7 +42,7 @@ struct DatePickerView: View {
                         }.frame(width: 300)
 
                         """#)
-                }
+                }.padding()
                 Divider()
 
                 Spacer(minLength: 50)
