@@ -724,3 +724,693 @@ struct PickerView: View {
     }
 ```
 </details>
+
+    
+## Layout
+### Depth Stack
+<details><summary>開く</summary>
+<img width="250" alt="ZStack" src="https://user-images.githubusercontent.com/25924137/117626803-75962000-b1b2-11eb-8efc-a8e57de00f18.png">
+<img width="250" alt="ZStack2" src="https://user-images.githubusercontent.com/25924137/117626806-775fe380-b1b2-11eb-8d56-e9641c01db58.png">
+
+```swift
+        Group {
+            Text("ZStack")
+            ZStack {
+                ForEach(0..<colors.count) {
+                    Rectangle()
+                        .fill(colors[$0])
+                        .frame(width: 100, height: 100)
+                        .offset(x: CGFloat($0) * 10.0,
+                                y: CGFloat($0) * 10.0)
+                }
+            }.padding(.bottom, 70)
+        }
+        Group {
+            Text("ZStack(alignment: .center)")
+            ZStack(alignment: .center) {
+                Rectangle()
+                    .fill(Color.red)
+                    .frame(width: 100, height: 50)
+                Rectangle()
+                    .fill(Color.blue)
+                    .frame(width:50, height: 100)
+            }
+            .border(Color.green, width: 1)
+        }
+        Group {
+            Text("ZStack(alignment: .bottomLeading)")
+            ZStack(alignment: .bottomLeading) {
+                Rectangle()
+                    .fill(Color.red)
+                    .frame(width: 100, height: 50)
+                Rectangle()
+                    .fill(Color.blue)
+                    .frame(width:50, height: 100)
+            }
+            .border(Color.green, width: 1)
+        }
+        Group {
+            Text("ZStack(alignment: .bottomTrailing)")
+            ZStack(alignment: .bottomTrailing) {
+                Rectangle()
+                    .fill(Color.red)
+                    .frame(width: 100, height: 50)
+                Rectangle()
+                    .fill(Color.blue)
+                    .frame(width:50, height: 100)
+            }
+            .border(Color.green, width: 1)
+        }
+        Group {
+            Text("ZStack(alignment: .topLeading)")
+            ZStack(alignment: .topLeading) {
+                Rectangle()
+                    .fill(Color.red)
+                    .frame(width: 100, height: 50)
+                Rectangle()
+                    .fill(Color.blue)
+                    .frame(width:50, height: 100)
+            }
+            .border(Color.green, width: 1)
+        }
+        Group {
+            Text("ZStack(alignment: .topTrailing)")
+            ZStack(alignment: .topTrailing) {
+                Rectangle()
+                    .fill(Color.red)
+                    .frame(width: 100, height: 50)
+                Rectangle()
+                    .fill(Color.blue)
+                    .frame(width:50, height: 100)
+            }
+            .border(Color.green, width: 1)
+        }
+        Group {
+            Text("ZStack(alignment: .top)")
+            ZStack(alignment: .top) {
+                Rectangle()
+                    .fill(Color.red)
+                    .frame(width: 100, height: 50)
+                Rectangle()
+                    .fill(Color.blue)
+                    .frame(width:50, height: 100)
+            }
+            .border(Color.green, width: 1)
+        }
+        Group {
+            Text("ZStack(alignment: .leading)")
+            ZStack(alignment: .leading) {
+                Rectangle()
+                    .fill(Color.red)
+                    .frame(width: 100, height: 50)
+                Rectangle()
+                    .fill(Color.blue)
+                    .frame(width:50, height: 100)
+            }
+            .border(Color.green, width: 1)
+        }
+        Group {
+            Text("ZStack(alignment: .trailing)")
+            ZStack(alignment: .trailing) {
+                Rectangle()
+                    .fill(Color.red)
+                    .frame(width: 100, height: 50)
+                Rectangle()
+                    .fill(Color.blue)
+                    .frame(width:50, height: 100)
+            }
+            .border(Color.green, width: 1)
+        }
+```
+</details>
+
+### HStack 
+<details><summary>開く</summary>
+<img width="250" alt="HStack" src="https://user-images.githubusercontent.com/25924137/117569922-eb42b300-b102-11eb-9114-3fc370171254.png">
+
+```swift
+    var body: some View {
+        VStack {
+            Text("default")
+                .frame(maxWidth: 400, alignment: .leading)
+                .padding(.top, 20)
+            HStack {
+                Text("First")
+                    .border(Color.red, width: 2.0)
+                Image(systemName: "2.circle")
+                    .resizable()
+                    .frame(width: 60, height: 60)
+                    .border(Color.green, width: 2.0)
+                Text("Third Third Third Third Third")
+                    .border(Color.blue, width: 2.0)
+            }
+            .frame(width: 400)
+            .border(Color.red)
+
+            Text("alignment: .top")
+                .frame(maxWidth: 400, alignment: .leading)
+                .padding(.top, 20)
+            HStack(alignment: .top) {
+                Text("First")
+                    .border(Color.red, width: 2.0)
+                Image(systemName: "2.circle")
+                    .resizable()
+                    .frame(width: 60, height: 60)
+                    .border(Color.green, width: 2.0)
+                Text("Third Third Third Third Third")
+                    .border(Color.blue, width: 2.0)
+            }
+            .frame(width: 400)
+            .border(Color.red)
+
+            Text("alignment: .bottom")
+                .frame(maxWidth: 400, alignment: .leading)
+                .padding(.top, 20)
+            HStack(alignment: .bottom) {
+                Text("First")
+                    .border(Color.red, width: 2.0)
+                Image(systemName: "2.circle")
+                    .resizable()
+                    .frame(width: 60, height: 60)
+                    .border(Color.green, width: 2.0)
+                Text("Third Third Third Third Third")
+                    .border(Color.blue, width: 2.0)
+            }
+            .frame(width: 400)
+            .border(Color.red)
+
+            Text("spacing: 50")
+                .frame(maxWidth: 400, alignment: .leading)
+                .padding(.top, 20)
+            HStack(spacing: 50) {
+                Text("First")
+                    .border(Color.red, width: 2.0)
+                Image(systemName: "2.circle")
+                    .resizable()
+                    .frame(width: 60, height: 60)
+                    .border(Color.green, width: 2.0)
+                Text("Third Third Third Third Third")
+                    .border(Color.blue, width: 2.0)
+            }
+            .frame(width: 400)
+            .border(Color.red)            
+        }
+    }
+```
+</details>
+
+### GeometryReader
+<details><summary>開く</summary>
+<img src="https://user-images.githubusercontent.com/25924137/117568570-f6deab80-b0fb-11eb-86cc-4cacb97172cf.gif" width="250">
+
+```swift
+    var body: some View {
+        ScrollView(.vertical) {
+            VStack {
+                GeometryReader { geometry in
+                    Text(#"""
+                        geometry.frame(in: .global).origin.x: \#(geometry.frame(in: .global).origin.x)
+                        geometry.frame(in: .global).origin.y: \#(geometry.frame(in: .global).origin.y)
+                        geometry.frame(in: .global).width: \#(geometry.frame(in: .global).width)
+                        geometry.frame(in: .global).height: \#(geometry.frame(in: .global).height)
+                        geometry.frame(in: .global).minX: \#(geometry.frame(in: .global).minX)
+                        geometry.frame(in: .global).midX: \#(geometry.frame(in: .global).midX)
+                        geometry.frame(in: .global).maxX: \#(geometry.frame(in: .global).maxX)
+                        geometry.frame(in: .global).minY: \#(geometry.frame(in: .global).minY)
+                        geometry.frame(in: .global).midY: \#(geometry.frame(in: .global).midY)
+                        geometry.frame(in: .global).maxY: \#(geometry.frame(in: .global).maxY)
+                    """#)
+                    
+                }
+                .frame(height: 250)
+                .border(Color.red, width: 2.0)
+                            
+                GeometryReader { geometry in
+                    Text(#"""
+                        geometry.frame(in: .local).origin.x: \#(geometry.frame(in: .local).origin.x)
+                        geometry.frame(in: .local).origin.y: \#(geometry.frame(in: .local).origin.y)
+                        geometry.frame(in: .local).width: \#(geometry.frame(in: .local).width)
+                        geometry.frame(in: .local).height: \#(geometry.frame(in: .local).height)
+                        geometry.frame(in: .local).minX: \#(geometry.frame(in: .local).minX)
+                        geometry.frame(in: .local).midX: \#(geometry.frame(in: .local).midX)
+                        geometry.frame(in: .local).maxX: \#(geometry.frame(in: .local).maxX)
+                        geometry.frame(in: .local).minY: \#(geometry.frame(in: .local).minY)
+                        geometry.frame(in: .local).midY: \#(geometry.frame(in: .local).midY)
+                        geometry.frame(in: .local).maxY: \#(geometry.frame(in: .local).maxY)
+                    """#)
+                    
+                }
+                .frame(height: 250)
+                .border(Color.green, width: 2.0)
+                
+                GeometryReader { geometry in
+                    Text(#"""
+                        geometry.size.debugDescription: \#(geometry.size.debugDescription)
+                    """#)
+                    
+                }
+                .frame(height: 100)
+                .border(Color.green, width: 2.0)
+            }
+        }
+    }
+```
+</details>
+    
+### LazyHGrid
+<details><summary>開く</summary>
+<img width="250" alt="LazyHGrid" src="https://user-images.githubusercontent.com/25924137/117628254-e853cb00-b1b3-11eb-9ec4-d297ff94b64e.png">
+<img width="250" alt="LazyHGrid2" src="https://user-images.githubusercontent.com/25924137/117628263-eab62500-b1b3-11eb-93e2-f4570ee85616.png">
+
+```swift
+    var rows1: [GridItem] =
+        Array(repeating: .init(.fixed(40)), count: 2)
+    var rows2: [GridItem] =
+        Array(repeating: .init(.fixed(80)), count: 2)
+    var rows3: [GridItem] =
+        Array(repeating: .init(.fixed(40)), count: 4)
+    var rows4: [GridItem] =
+        Array(repeating: .init(.flexible(minimum: 40, maximum: 100)), count: 4)
+    var rows5: [GridItem] =
+        Array(repeating: .init(.adaptive(minimum: 40, maximum: 100)), count: 4)
+
+    var body: some View {
+        ScrollView(.vertical){
+            VStack {
+                Group {
+                    Text("Array(repeating: .init(.fixed(40)), count: 2)")
+                    ScrollView(.horizontal) {
+                        LazyHGrid(rows: rows1, alignment: .top) {
+                            ForEach((0...79), id: \.self) {
+                                let codepoint = $0 + 0x1f600
+                                let emoji = String(Character(UnicodeScalar(codepoint)!))
+                                Text("\(emoji)")
+                                    .font(.largeTitle)
+                            }
+                        }
+                    }.border(Color.red, width: 2)
+                }
+                Group {
+                    Text("Array(repeating: .init(.fixed(80)), count: 2)")
+                    ScrollView(.horizontal) {
+                        LazyHGrid(rows: rows2, alignment: .top) {
+                            ForEach((0...79), id: \.self) {
+                                let codepoint = $0 + 0x1f600
+                                let emoji = String(Character(UnicodeScalar(codepoint)!))
+                                Text("\(emoji)")
+                                    .font(.largeTitle)
+                            }
+                        }
+                    }.border(Color.red, width: 2)
+                }
+                Group {
+                    Text("Array(repeating: .init(.fixed(40)), count: 4)")
+                    ScrollView(.horizontal) {
+                        LazyHGrid(rows: rows3, alignment: .top) {
+                            ForEach((0...79), id: \.self) {
+                                let codepoint = $0 + 0x1f600
+                                let emoji = String(Character(UnicodeScalar(codepoint)!))
+                                Text("\(emoji)")
+                                    .font(.largeTitle)
+                            }
+                        }
+                    }.border(Color.red, width: 2)
+                }
+                Group {
+                    Text("Array(repeating: .init(.flexible(minimum: 40, maximum: 100)), count: 4)")
+                    ScrollView(.horizontal) {
+                        LazyHGrid(rows: rows4, alignment: .top) {
+                            ForEach((0...79), id: \.self) {
+                                let codepoint = $0 + 0x1f600
+                                let emoji = String(Character(UnicodeScalar(codepoint)!))
+                                Text("\(emoji)")
+                                    .font(.largeTitle)
+                            }
+                        }
+                    }.border(Color.red, width: 2)
+                }
+                Group {
+                    Text("Array(repeating: .init(.adaptive(minimum: 40, maximum: 100)), count: 4)")
+                    ScrollView(.horizontal) {
+                        LazyHGrid(rows: rows5, alignment: .top) {
+                            ForEach((0...79), id: \.self) {
+                                let codepoint = $0 + 0x1f600
+                                let emoji = String(Character(UnicodeScalar(codepoint)!))
+                                Text("\(emoji)")
+                                    .font(.largeTitle)
+                            }
+                        }
+                    }.border(Color.red, width: 2)
+                }
+            }
+        }
+    }
+```
+</details>
+    
+### LazyHStack
+<details><summary>開く</summary>
+<img src="https://user-images.githubusercontent.com/25924137/117628970-a70feb00-b1b4-11eb-99e3-a58abfed037b.gif" width="250">
+
+```swift
+    @State private var showedIndex = ""
+    @State private var showedIndex2 = ""
+
+    var body: some View {
+        VStack {
+            Text("HStack")
+            ScrollView(.horizontal) {
+                HStack(alignment: .center, spacing: 10) {
+                    Section(header: Text("header"), footer: Text("footer")) {
+                        ForEach(1...20, id: \.self) { count in
+                            Image(systemName: "\(count).square")
+                                .font(.largeTitle)
+                                .frame(height: 70)
+                                .onAppear(perform: {
+                                    showedIndex += "\(count) "
+                                })
+                        }
+                    }
+                }
+            }
+            Text("showedIndex: \(showedIndex)")
+                .padding(.bottom, 50)
+
+            Text("LazyHStack ")
+            ScrollView(.horizontal) {
+                LazyHStack(alignment: .center, spacing: 10) {
+                    Section(header: Text("header"), footer: Text("footer")) {
+                        ForEach(1...20, id: \.self) { count in
+                            Image(systemName: "\(count).square")
+                                .font(.largeTitle)
+                                .frame(height: 70)
+                                .onAppear(perform: {
+                                    showedIndex2 += "\(count) "
+                                })
+                        }
+                    }
+                }.frame(height: 70)
+            }
+            Text("showedIndex: \(showedIndex2)")
+                .padding(.bottom, 50)
+
+            Text("LazyHStack pinnedViews: .sectionHeaders")
+            ScrollView(.horizontal) {
+                LazyHStack(alignment: .center, spacing: 10, pinnedViews: .sectionHeaders) {
+                    Section(header: Text("header"), footer: Text("footer")) {
+                        ForEach(1...20, id: \.self) { count in
+                            Image(systemName: "\(count).square")
+                                .font(.largeTitle)
+                                .frame(height: 70)
+                        }
+                    }
+                }.frame(height: 70)
+            }
+        }
+    }
+```
+</details>
+    
+### LazyVGrid
+<details><summary>開く</summary>
+<img width="250" alt="LazyVGrid" src="https://user-images.githubusercontent.com/25924137/117629532-387f5d00-b1b5-11eb-89f6-9741ba95c257.png">
+<img width="250" alt="LazyVGrid2" src="https://user-images.githubusercontent.com/25924137/117629543-3cab7a80-b1b5-11eb-8dad-10cf6c1a3623.png">
+<img width="250" alt="LazyVGrid3" src="https://user-images.githubusercontent.com/25924137/117629549-3ddca780-b1b5-11eb-9746-7be9cc1b01ab.png">
+
+```swift
+    var columns: [GridItem] =
+            Array(repeating: .init(.flexible()), count: 2)
+    var columns2: [GridItem] =
+            Array(repeating: .init(.fixed(80)), count: 2)
+    var columns3: [GridItem] =
+            Array(repeating: .init(.flexible(minimum: 80, maximum: 100)), count: 2)
+    var columns4: [GridItem] =
+            Array(repeating: .init(.flexible(minimum: 80, maximum: 100)), count: 4)
+    var columns5: [GridItem] =
+            Array(repeating: .init(.adaptive(minimum: 80)), count: 2)
+
+    var body: some View {
+        ScrollView(.vertical) {
+            VStack {
+                Group {
+                    Text("Array(repeating: .init(.flexible()), count: 2)")
+                    ScrollView {
+                        LazyVGrid(columns: columns) {
+                            ForEach((0...79), id: \.self) {
+                                let codepoint = $0 + 0x1f600
+                                let codepointString = String(format: "%02X", codepoint)
+                                Text("\(codepointString)")
+                                let emoji = String(Character(UnicodeScalar(codepoint)!))
+                                Text("\(emoji)")
+                            }
+                        }.font(.largeTitle)
+                    }.frame(height: 200)
+                    .border(Color.red, width: 2)
+                }
+                Group {
+                    Text("Array(repeating: .init(.fixed(80)), count: 2)")
+                    ScrollView {
+                        LazyVGrid(columns: columns2) {
+                            ForEach((0...79), id: \.self) {
+                                let codepoint = $0 + 0x1f600
+                                let codepointString = String(format: "%02X", codepoint)
+                                Text("\(codepointString)")
+                                let emoji = String(Character(UnicodeScalar(codepoint)!))
+                                Text("\(emoji)")
+                            }
+                        }.font(.largeTitle)
+                    }.frame(height: 200)
+                    .border(Color.red, width: 2)
+                }
+                Group {
+                    Text("Array(repeating: .init(.flexible(minimum: 80, maximum: 100)), count: 2)")
+                    ScrollView {
+                        LazyVGrid(columns: columns3) {
+                            ForEach((0...79), id: \.self) {
+                                let codepoint = $0 + 0x1f600
+                                let codepointString = String(format: "%02X", codepoint)
+                                Text("\(codepointString)")
+                                let emoji = String(Character(UnicodeScalar(codepoint)!))
+                                Text("\(emoji)")
+                            }
+                        }.font(.largeTitle)
+                    }.frame(height: 200)
+                    .border(Color.red, width: 2)
+                }
+                Group {
+                    Text("Array(repeating: .init(.flexible(minimum: 80, maximum: 100)), count: 4)")
+                    ScrollView {
+                        LazyVGrid(columns: columns4) {
+                            ForEach((0...79), id: \.self) {
+                                let codepoint = $0 + 0x1f600
+                                let codepointString = String(format: "%02X", codepoint)
+                                Text("\(codepointString)")
+                                let emoji = String(Character(UnicodeScalar(codepoint)!))
+                                Text("\(emoji)")
+                            }
+                        }.font(.largeTitle)
+                    }.frame(height: 200)
+                    .border(Color.red, width: 2)
+                }
+                Group {
+                    Text("Array(repeating: .init(.adaptive(minimum: 80)), count: 2)")
+                    ScrollView {
+                        LazyVGrid(columns: columns5) {
+                            ForEach((0...79), id: \.self) {
+                                let codepoint = $0 + 0x1f600
+                                let codepointString = String(format: "%02X", codepoint)
+                                Text("\(codepointString)")
+                                let emoji = String(Character(UnicodeScalar(codepoint)!))
+                                Text("\(emoji)")
+                            }
+                        }.font(.largeTitle)
+                    }.frame(height: 200)
+                    .border(Color.red, width: 2)
+                }
+            }
+        }
+    }
+```
+</details>
+    
+### LazyVStack
+<details><summary>開く</summary>
+<img src="https://user-images.githubusercontent.com/25924137/117630315-091d2000-b1b6-11eb-94ff-2e13fac93541.gif" width="250">
+
+```swift
+    @State private var showedIndex = ""
+    @State private var showedIndex2 = ""
+
+    var body: some View {
+        ScrollView(.vertical) {
+            VStack {
+                Text("VStack")
+                ScrollView(.vertical) {
+                    VStack(alignment: .center, spacing: 10) {
+                        Section(header: Text("header"), footer: Text("footer")) {
+                            ForEach(1...20, id: \.self) { count in
+                                Image(systemName: "\(count).square")
+                                    .font(.largeTitle)
+                                    .frame(height: 70)
+                                    .onAppear(perform: {
+                                        showedIndex += "\(count) "
+                                    })
+                            }
+                        }
+                    }
+                }.frame(height: 200)
+                Text("showedIndex: \(showedIndex)")
+                    .padding(.bottom, 50)
+
+                Text("LazyVStack ")
+                ScrollView(.vertical) {
+                    LazyVStack(alignment: .center, spacing: 10) {
+                        Section(header: Text("header"), footer: Text("footer")) {
+                            ForEach(1...20, id: \.self) { count in
+                                Image(systemName: "\(count).square")
+                                    .font(.largeTitle)
+                                    .frame(height: 70)
+                                    .onAppear(perform: {
+                                        showedIndex2 += "\(count) "
+                                    })
+                            }
+                        }
+                    }
+                }.frame(height: 200)
+                Text("showedIndex: \(showedIndex2)")
+                    .padding(.bottom, 50)
+
+                Text("LazyVStack pinnedViews: .sectionHeaders")
+                    
+                    
+                ScrollView(.vertical) {
+                    LazyVStack(alignment: .center, spacing: 10, pinnedViews: .sectionHeaders) {
+                        Section(header: Text("header"), footer: Text("footer")) {
+                            ForEach(1...20, id: \.self) { count in
+                                Image(systemName: "\(count).square")
+                                    .font(.largeTitle)
+                                    .frame(height: 70)
+                            }
+                        }
+                    }
+                }.frame(height: 200)
+            }
+        }
+    }
+```
+</details>
+    
+### ScrollViewReader
+<details><summary>開く</summary>
+<img src="https://user-images.githubusercontent.com/25924137/117630829-8d6fa300-b1b6-11eb-86f3-6342564993f9.gif" width="250">
+
+```swift
+        ScrollViewReader { proxy in
+            ScrollView {
+                Button("proxy.scrollTo(30, anchor: .top)") {
+                    withAnimation {
+                        proxy.scrollTo(30, anchor: .top)
+                    }
+                }.id(0)
+
+                Button("proxy.scrollTo(30, anchor: .center)") {
+                    withAnimation {
+                        proxy.scrollTo(30, anchor: .center)
+                    }
+                }.id(0)
+
+                Button("proxy.scrollTo(30, anchor: .bottom)") {
+                    withAnimation {
+                        proxy.scrollTo(30, anchor: .bottom)
+                    }
+                }.id(0)
+
+                ForEach(1..<51) { index in
+                    Image(systemName: "\(index).square")
+                        .font(.largeTitle)
+                        .frame(height: 70)
+                        .id(index)
+                }
+                
+                Button("Top") {
+                    withAnimation {
+                        proxy.scrollTo(0)
+                    }
+                }
+            }
+        }
+```
+</details>
+    
+### VStack
+<details><summary>開く</summary>
+<img width="250" alt="VStack" src="https://user-images.githubusercontent.com/25924137/117631076-d58ec580-b1b6-11eb-942b-5c7ea2afe920.png">
+
+```swift
+        VStack {
+            Text("default")
+                .frame(maxWidth: 400, alignment: .leading)
+                .padding(.top, 20)
+            VStack {
+                Text("First")
+                    .border(Color.red, width: 2.0)
+                Image(systemName: "2.circle")
+                    .resizable()
+                    .frame(width: 60, height: 60)
+                    .border(Color.green, width: 2.0)
+                Text("Third Third Third Third Third")
+                    .border(Color.blue, width: 2.0)
+            }
+            .frame(width: 400)
+            .border(Color.red)
+
+            Text("alignment: .leading")
+                .frame(maxWidth: 400, alignment: .leading)
+                .padding(.top, 20)
+            VStack(alignment: .leading) {
+                Text("First")
+                    .border(Color.red, width: 2.0)
+                Image(systemName: "2.circle")
+                    .resizable()
+                    .frame(width: 60, height: 60)
+                    .border(Color.green, width: 2.0)
+                Text("Third Third Third Third Third")
+                    .border(Color.blue, width: 2.0)
+            }
+            .frame(width: 400)
+            .border(Color.red)
+
+            Text("alignment: .center")
+                .frame(maxWidth: 400, alignment: .leading)
+                .padding(.top, 20)
+            VStack(alignment: .center) {
+                Text("First")
+                    .border(Color.red, width: 2.0)
+                Image(systemName: "2.circle")
+                    .resizable()
+                    .frame(width: 60, height: 60)
+                    .border(Color.green, width: 2.0)
+                Text("Third Third Third Third Third")
+                    .border(Color.blue, width: 2.0)
+            }
+            .frame(width: 400)
+            .border(Color.red)
+
+            Text("alignment: .trailing")
+                .frame(maxWidth: 400, alignment: .leading)
+                .padding(.top, 20)
+            VStack(alignment: .trailing) {
+                Text("First")
+                    .border(Color.red, width: 2.0)
+                Image(systemName: "2.circle")
+                    .resizable()
+                    .frame(width: 60, height: 60)
+                    .border(Color.green, width: 2.0)
+                Text("Third Third Third Third Third Third Third")
+                    .border(Color.blue, width: 2.0)
+            }
+            .frame(width: 400)
+            .border(Color.red)
+        }
+```
+</details>
